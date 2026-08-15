@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyperliquid Explorer - Live Open Positions</title>
+  <style>
+    body { font-family: 'JetBrains Mono', monospace, -apple-system, sans-serif; background: #0a0e17; color: #d1d5db; padding: 24px; margin: 0; }
+    .header { border-bottom: 1px solid #1f293d; padding-bottom: 16px; margin-bottom: 20px; }
+    .trader-title { font-size: 20px; font-weight: bold; color: #ef4444; }
+    .breach-alert { background: #450a0a; border: 1px solid #ef4444; color: #fca5a5; padding: 12px; border-radius: 8px; font-size: 13px; margin-bottom: 18px; }
+    .table-container { background: #0f172a; border: 1px solid #1e293b; border-radius: 8px; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
+    th { background: #1e293b; padding: 10px 14px; color: #94a3b8; font-weight: 600; }
+    td { padding: 10px 14px; border-bottom: 1px solid #1e293b; }
+    .red { color: #ef4444; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="trader-title">Trader 0x4a9b...7e12 (Live Open Positions)</div>
+    <div style="font-size: 12px; color: #94a3b8; margin-top: 6px;">Live Snapshot: 2026-08-16 01:45:00 UTC | Total Account Equity: $25,000 USD</div>
+  </div>
+
+  <div class="breach-alert">
+    <strong>⚠️ RISK MANDATE DRIFT ALERT:</strong> Trader has opened an unwhitelisted 80x DOGE-PERP position exceeding max allowed leverage (10x limit) and asset whitelist (BTC, ETH, SOL only).
+  </div>
+
+  <h3>Current Active Open Positions (3 Active)</h3>
+  <div class="table-container">
+    <table id="open-positions">
+      <thead>
+        <tr>
+          <th>Asset</th>
+          <th>Direction</th>
+          <th>Size (USD)</th>
+          <th>Leverage</th>
+          <th>Entry Price</th>
+          <th>Unrealized PnL</th>
+          <th>Mandate Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>BTC-PERP</td>
+          <td>LONG</td>
+          <td>$5,000 (20% equity)</td>
+          <td>5x</td>
+          <td>$62,400</td>
+          <td class="red">-$120</td>
+          <td style="color: #22c55e;">COMPLIANT</td>
+        </tr>
+        <tr>
+          <td>ETH-PERP</td>
+          <td>SHORT</td>
+          <td>$4,000 (16% equity)</td>
+          <td>5x</td>
+          <td>$2,850</td>
+          <td style="color: #22c55e;">+$85</td>
+          <td style="color: #22c55e;">COMPLIANT</td>
+        </tr>
+        <tr style="background: #2a0808;">
+          <td><strong class="red">DOGE-PERP</strong></td>
+          <td>LONG</td>
+          <td><strong>$18,000 (72% equity)</strong></td>
+          <td><strong class="red">80x</strong></td>
+          <td>$0.142</td>
+          <td class="red">-$1,450</td>
+          <td><strong class="red">CRITICAL BREACH: 80x LEVERAGE & UNWHITELISTED ASSET</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyperliquid Explorer - Trader 0x4a9b...7e12</title>
+  <style>
+    body { font-family: 'JetBrains Mono', monospace, -apple-system, sans-serif; background: #0a0e17; color: #d1d5db; padding: 24px; margin: 0; }
+    .header { border-bottom: 1px solid #1f293d; padding-bottom: 16px; margin-bottom: 20px; }
+    .trader-title { font-size: 20px; font-weight: bold; color: #38bdf8; }
+    .stat-badge { display: inline-block; background: #0f172a; border: 1px solid #1e293b; padding: 6px 12px; border-radius: 6px; margin-right: 8px; margin-top: 8px; font-size: 13px; }
+    .table-container { background: #0f172a; border: 1px solid #1e293b; border-radius: 8px; overflow: hidden; margin-top: 20px; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
+    th { background: #1e293b; padding: 10px 14px; color: #94a3b8; font-weight: 600; }
+    td { padding: 10px 14px; border-bottom: 1px solid #1e293b; }
+    .green { color: #22c55e; }
+    .red { color: #ef4444; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="trader-title" id="trader-address">Trader: 0x4a9b23f81902c34918239482910394817e12a89c</div>
+    <div style="margin-top: 8px;">
+      <span class="stat-badge">30D PnL: <strong class="green">+$48,250 (+34.2%)</strong></span>
+      <span class="stat-badge">Win Rate: <strong>68.4%</strong></span>
+      <span class="stat-badge">Max Leverage Used: <strong>5x</strong></span>
+      <span class="stat-badge">Avg Hold Time: <strong>2.4 Hours</strong></span>
+      <span class="stat-badge">Max Drawdown: <strong>-4.2%</strong></span>
+      <span class="stat-badge">Asset Focus: <strong>BTC, ETH, SOL</strong></span>
+    </div>
+  </div>
+
+  <h3>Recent Trade History (Last 50 Closed Trades)</h3>
+  <div class="table-container">
+    <table id="trade-history">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Asset</th>
+          <th>Direction</th>
+          <th>Size (USD)</th>
+          <th>Leverage</th>
+          <th>Hold Time</th>
+          <th>Realized PnL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>2026-08-15 01:20</td><td>BTC-PERP</td><td>LONG</td><td>$15,000</td><td>3x</td><td>1.8 hrs</td><td class="green">+$640 (+4.2%)</td></tr>
+        <tr><td>2026-08-14 22:15</td><td>ETH-PERP</td><td>SHORT</td><td>$10,000</td><td>4x</td><td>3.1 hrs</td><td class="green">+$380 (+3.8%)</td></tr>
+        <tr><td>2026-08-14 18:40</td><td>SOL-PERP</td><td>LONG</td><td>$8,000</td><td>5x</td><td>2.0 hrs</td><td class="red">-$160 (-2.0%)</td></tr>
+        <tr><td>2026-08-14 14:10</td><td>BTC-PERP</td><td>LONG</td><td>$12,000</td><td>3x</td><td>2.5 hrs</td><td class="green">+$510 (+4.2%)</td></tr>
+        <tr><td>2026-08-14 09:30</td><td>ETH-PERP</td><td>LONG</td><td>$10,000</td><td>4x</td><td>1.4 hrs</td><td class="green">+$290 (+2.9%)</td></tr>
+        <tr><td>2026-08-13 23:05</td><td>BTC-PERP</td><td>SHORT</td><td>$15,000</td><td>3x</td><td>4.2 hrs</td><td class="green">+$720 (+4.8%)</td></tr>
+        <tr><td>2026-08-13 17:50</td><td>SOL-PERP</td><td>SHORT</td><td>$8,000</td><td>5x</td><td>1.2 hrs</td><td class="red">-$120 (-1.5%)</td></tr>
+        <tr><td>2026-08-13 12:15</td><td>BTC-PERP</td><td>LONG</td><td>$14,000</td><td>4x</td><td>2.7 hrs</td><td class="green">+$610 (+4.3%)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size: 11px; color: #64748b; margin-top: 12px;">Strategy Classification: Disciplined Trend Follower / Systematic Multi-Asset Swing. Strict risk controls, zero martingale behavior.</p>
+</body>
+</html>
